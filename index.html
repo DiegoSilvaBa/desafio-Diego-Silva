@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilo.css">
+        <script type="text/javascript" src="javascript/script.js"></script>
+        <title>Lanchonete DB</title>
+    </head>
+
+    <body>
+        
+        <header>
+            <img src="imagens/db-logo.jpg" alt="">
+            <h1>Lanchonete DB</h1>
+        </header>
+
+        <main>
+            <div>
+                <h2>Cardápio</h2>
+                <span>Lista de produtos</span>
+            </div>
+
+            <div id="cardapio">
+                <table border="1">
+                    <thead>
+                        <th>codigo</th>
+                        <th>descrição</th>
+                        <th>valor</th>
+                    </thead>
+
+                    <tbody class="center">
+                        <tr>
+                            <td>cafe</td>
+                            <td>Café</td>
+                            <td>R$ 3,00</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>chantily</td>
+                            <td>Chantily (extra do café)</td>
+                            <td>R$ 1,50</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>suco</td>
+                            <td>Suco Natural</td>
+                            <td>R$ 6,20</td>
+                        </tr>
+
+                        <tr>
+                            <td>sanduiche</td>
+                            <td>Sanduíche</td>
+                            <td>R$ 6,50</td>
+                        </tr>
+
+                        <tr>
+                            <td>queijo</td>
+                            <td>Queijo (extra do sanduíche)</td>
+                            <td>R$ 2,00</td>
+                        </tr>
+
+                        <tr>
+                            <td>salgado</td>
+                            <td>Salgado</td>
+                            <td>R$ 7,25</td>
+                        </tr>
+
+                        <tr>
+                            <td>combo1</td>
+                            <td>1 Suco e 1 Sansuíche</td>
+                            <td>R$ 9,50</td>
+                        </tr>
+
+                        <tr>
+                            <td>combo2</td>
+                            <td>1 Café e 1 Sanduíche</td>
+                            <td>R$ 7,50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="title">
+                <h2>Pedido</h2>
+            </div>
+
+            <div class="card">
+                <div class="lineInput">
+                    <label for="produto">Código do produto</label>
+                    <input type="text" name="produto" id="produto" placeholder="Informe o código do produto">
+                </div>
+                <div class="lineInput">
+                    <label for="valor">Quantidade</label>
+                    <input type="number" name="valor" id="valor" placeholder="Informe a quantidade do produto">
+                </div>
+                <button id="btn1" onclick="produto.salvar()">Salvar</button>
+                <button onclick="produto.cancelar()">Cancelar</button>             
+            </div>
+
+            <div class="content">
+                <table class="center" border="1">
+                    <thead >
+                        <th>Item</th>
+                        <th>Produto</th>
+                        <th>Quantidade</th>
+                        <th>Valor</th>
+                        <th>Ações</th>
+                    </thead>
+
+                    <tbody id="tbody">
+                        <tr class="center">
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+    </body>
+
+</html>
